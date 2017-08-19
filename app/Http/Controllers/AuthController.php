@@ -25,9 +25,9 @@ class AuthController extends Controller
 
             $uuid = (string)Uuid::generate(5, $username + time(), Uuid::NS_DNS);
             Cache::tags('mobile_token')->put($username, $uuid, $this->TOKEN_EXPIRE_TIME);
-            return response()->json(['status' => 1, 'error_code' => 0, 'token' => $uuid]);
+            return response()->json(['rtv' => 1, 'error_code' => 0, 'token' => $uuid]);
         } else {
-            return response()->json(['status' => 0]);
+            return response()->json(['rtv' => 0]);
         }
     }
 }

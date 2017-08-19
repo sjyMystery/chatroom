@@ -26,3 +26,7 @@ Route::get('/event', function($user){
     Event::fire(new \App\Events\SomeEvent(3));
     return "hello world";
 });
+
+Route::get('/test',function(){
+    return response()->json(['data'=>0]);
+});

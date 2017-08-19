@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import {test} from './core/network'
 class App extends Component {
+    constructor()
+    {
+        super()
+        test()
+    }
   render() {
     return (
       <div className="App">
