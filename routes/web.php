@@ -18,6 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('api')->group(function(){
+
+});
 
 Route::get('/event', function($user){
     Event::fire(new \App\Events\SomeEvent(3));
